@@ -66,8 +66,6 @@ Until v0.5, use the small converter script:
   - `<Name>_thumb.jpg` (if present)  
   - `images/…` (extracted)
 
-> Tip: If your `.concept` files are large, consider Git LFS for storing samples.
-
 ---
 
 ## 📂 Repository Layout
@@ -86,23 +84,6 @@ Until v0.5, use the small converter script:
 ```
 ---
 
-## 🌐 GitHub Pages (optional)
-- Enable Pages for this repo (Settings → Pages).  
-- Source: `main` (or dedicated `gh-pages`) / root.  
-- Put `viewer/latest.html` in the published path and **(optional)** add `viewer/index.html` that redirects to `latest.html`:
-
-```html
-<!doctype html><meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=latest.html">
-<title>Redirecting…</title>
-<script>location.href="latest.html";</script>
-```
-
-- Share:  
-  - **Stable link:** `…/viewer/latest.html`  
-  - **Pinned version:** `…/viewer/ConceptsViewer_0.4.7.html`
-
----
 
 ## 🛣 Roadmap
 - **0.5** – Fully in-browser converter (no Python), optional `vendor/` polyfills (e.g., decompression for Firefox).  
