@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.18.alpha
+- First working release with an integrated *.concept to *json converter.
+- Converting is performed within file, no external py-script
+- Also works with embedded image files
+
 ## v0.4.7
 - First stable version
 - import of converted json file
