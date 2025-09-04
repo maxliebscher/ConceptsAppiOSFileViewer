@@ -1,3 +1,9 @@
+# ConceptsApp iOS WebViewer v0.5.0 is is live — grab it under /releases.
+- This Readme will be updated subsequently.
+- Meanwhile see release notes for new features 
+
+---
+
 # ConceptsApp iOS WebViewer v0.4.7
 
 > **Offline-first viewer for Concepts (`.concept`) files converted to JSON.**  
