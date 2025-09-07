@@ -27,6 +27,8 @@
 - **Reset UI** (localStorage) in Info panel.
 
 **Known Gaps**
+- when loading a *.concept-file embedded images are not applied
+- manually loading images from unpacked *.zip only works with the *.json file, not a *.concept
 - SVG export is still experimental, maybe needs horiz./vert. mirroring
 - SVG stroke-linecaps are not rounded
 - Lava Flow Tag Soup but stable
