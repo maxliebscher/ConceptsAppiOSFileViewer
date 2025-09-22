@@ -1,14 +1,10 @@
-# ConceptsApp iOS WebViewer v0.5.0 is is live — grab it under /releases or try the LIVE DEMO: https://maxliebscher.github.io/ConceptsAppiOSFileViewer/
-- This Readme will be updated subsequently.
-- Meanwhile see release notes for new features 
+# ConceptsApp iOS WebViewer v0.5.0
 
----
+👉 **[Live Demo](https://maxliebscher.github.io/ConceptsAppiOSFileViewer/)**  
+👉 **[Download under Releases](../../releases)**  
 
-# ConceptsApp iOS WebViewer v0.4.7
-
-> **Offline-first viewer for Concepts (`.concept`) files converted to JSON.**  
-> v0.4.7 is a stable viewer release. Conversion from `.concept` → `.json` currently requires a small Python script.  
-> v0.5 will add in-browser conversion (no Python needed).
+> **Offline-first web viewer for Concepts (`.concept`) files.**  
+> v0.5.0 adds full in-browser import — no external Python script required.
 
 <p align="center">
   <img src="assets/Screenshot_1.jpg" alt="Light UI – grid & panels" width="31%"/>
@@ -26,93 +22,76 @@
 
 ---
 
-## ✨ Features (0.4.7)
-- Single-file **HTML viewer** (no build, offline).
-- Loads **`concepts.json`** + optional embedded **images/**.
-- **Grid/Zoom/Center**, white-ink simulation, Dark/Light UI.
-- **PNG / SVG export** of the canvas.
-- Handles mirrors, basic auto-shapes, rough marker/airbrush (work-in-progress).
-- Legal notice & about modal included.
+## ✨ Features (v0.5.0)
 
-> Note: Full in-browser conversion from `.concept` will arrive in **v0.5** (with optional vendor polyfills for decompression where needed).
+- **Auto-import `.concept`** — converts on load (no script needed).  
+- **Cleaner UI/UX**  
+  - Collapsable top bar  
+  - Consistent section cards (light/dark)  
+  - Files panel simplified; Advanced mode for JSON/Images  
+  - Log panel (collapsible)  
+- **Dark Mode + White lines** — grouped, toggleable  
+- **PNG export** — @1×/2×/4× via offscreen canvas (auto filenames incl. version/zoom/mode)  
+- **SVG export** — working again (experimental, see Known Gaps)  
+- **ZIP download** — `name.zip` with `name.json` + generated `name_thumb.jpg`  
+- **Persistence** — remembers Collapse, Advanced, Log open, Dark, White lines, Images opacity  
+- **Keyboard shortcuts** — all listed in the Info modal  
 
 ---
 
 ## 🚀 Quick Start
 
-1) **Open the viewer**  
-- `viewer/ConceptsViewer_0.4.7.html` in your browser (double-click).  
-  - Optional live demo via GitHub Pages:  
-    `https://maxliebscher.github.io/ConceptsAppiOSFileViewer/`
+1. **Open the viewer**  
+   - `viewer/ConceptsViewer_0.5.0.html` in your browser  
+   - or try the [Live Demo](https://maxliebscher.github.io/ConceptsAppiOSFileViewer/)
 
-2) **Load data**  
-- Click **JSON** → choose a `concepts.json`.  
-- If your project has external images, click **Images → Pick** and multi-select the files (or select the whole `images/` folder if your browser allows).
+2. **Load data**  
+   - Load a `.concept` file directly  
+   - or load a converted `.json` (+ optional `images/`)
 
-3) **Navigate / Export**  
-- Use zoom controls (or mouse wheel, if supported) and **Center** to focus the content.  
-- **Export → PNG** or **Export → SVG** to save renders.
+3. **Navigate / Export**  
+   - Use **Center / Grid / Dark / White** controls  
+   - Export via **PNG** (1×/2×/4×) or **SVG**  
+   - Download ZIP for `.json` + thumb
+
+4. **Diagnostics**  
+   - Use the **Log drawer** for quick checks  
 
 ---
 
 ## 🧪 Try the Sample
 - `samples/Demofile-3/Demofile-3.json` (ready to load)  
-- Optional: open the matching `images/` and thumbnail if present.  
-- The original `.concept` is included for comparison.
+- Optional: open the matching `images/` .  
+- The original `.concept` is included for comparison.  
 
 ---
 
-## 🔁 Convert `.concept` → `concepts.json` (Python)
-Until v0.5, use the small converter script:
+## ⚠️ Known Gaps (v0.5.0)
 
-- File: `converter/conceptsapp_ios_to_json_v1_4_stable.py`  
-- Usage: **Drag & drop** your `.concept` onto the script (or run with Python 3: `python conceptsapp_ios_to_json_v1_4_stable.py <file.concept>`).  
-- Output:  
-  - `<Name>/<Name>.json`  
-  - `<Name>_thumb.jpg` (if present)  
-  - `images/…` (extracted)
+- Embedded images inside `.concept` are not applied.  
+- Manual loading of images from unpacked ZIP works only with `.json`, not `.concept`.  
+- SVG export still experimental:  
+  - Possible horizontal/vertical mirroring issues  
+  - Stroke linecaps not rounded
 
 ---
-
-## 📂 Repository Layout
-```
-/
-├─ viewer/
-│  ├─ ConceptsViewer_0.4.7.html   # stable, single-file viewer
-│  └─ latest.html                  # points to the latest stable viewer (optional)
-├─ converter/
-│  └─ conceptsapp_ios_to_json_v1_4_stable.py
-├─ samples/
-│  └─ Demofile-3/ ( .concept, .json, images/, thumb )
-├─ assets/
-│  └─ Screenshot_1.jpg … Screenshot_7.jpg
-├─ README.md · CHANGELOG.md · LICENSE · NOTICE
-```
----
-
 
 ## 🛣 Roadmap
-- **0.5** – Fully in-browser converter (no Python), optional `vendor/` polyfills (e.g., decompression for Firefox).  
-- **0.6** – Add more brush dynamics & auto-shapes.
-
----
-
-## ⚠️ Known Limitations (0.4.7)
-- Some advanced textured/pattern brushes not fully reproduced yet.  
-- Auto-shapes & brush dynamics are partial; results may differ from Concepts.
+- **0.5.x** — load embedded images in *.concept files, UI reset button  
+- **0.6** — improve SVG export, extend brush dynamics & auto-shapes  
 
 ---
 
 ## 📜 Legal
-This project is an unofficial viewer for content created with **Concepts** (TopHatch, Inc.).  
-All artwork and trademarks belong to their respective owners.
+This project is an **unofficial viewer** for content created with *Concepts* (TopHatch, Inc.).  
+All artwork and trademarks belong to their respective owners.  
 
 ---
 
 ## 📦 License
-MIT — see `LICENSE`.
+MIT — see `LICENSE`.  
 
 ---
 
 ## 🗒 Changelog
-See `CHANGELOG.md` for details on v0.4.7 and prior iterations.
+See [`CHANGELOG.md`](CHANGELOG.md) for details on v0.5.0 and earlier.
