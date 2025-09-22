@@ -1,4 +1,4 @@
-# ConceptsApp iOS WebViewer v0.5.0 is is live — grab it under /releases.
+# ConceptsApp iOS WebViewer v0.5.0 is is live — grab it under /releases or try the LIVE DEMO: https://maxliebscher.github.io/ConceptsAppiOSFileViewer/
 - This Readme will be updated subsequently.
 - Meanwhile see release notes for new features 
 
@@ -38,12 +38,12 @@
 
 ---
 
-## 🚀 Quick Start (Viewer only, no build)
+## 🚀 Quick Start
 
 1) **Open the viewer**  
 - `viewer/ConceptsViewer_0.4.7.html` in your browser (double-click).  
   - Optional live demo via GitHub Pages:  
-    `https://<GH_USER>.github.io/<REPO_NAME>/viewer/latest.html` *(replace with your user/repo)*
+    `https://maxliebscher.github.io/ConceptsAppiOSFileViewer/`
 
 2) **Load data**  
 - Click **JSON** → choose a `concepts.json`.  
@@ -93,7 +93,7 @@ Until v0.5, use the small converter script:
 
 ## 🛣 Roadmap
 - **0.5** – Fully in-browser converter (no Python), optional `vendor/` polyfills (e.g., decompression for Firefox).  
-- **0.6** – Remove Python converter (deprecated), add more brush dynamics & auto-shapes.
+- **0.6** – Add more brush dynamics & auto-shapes.
 
 ---
 
